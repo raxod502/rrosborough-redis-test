@@ -3,6 +3,7 @@ from urllib.parse import urlparse
 
 import redis
 
+print("Attempting to connect to redis at:", os.environ.get("REDIS_URL"))
 url = urlparse(os.environ.get("REDIS_URL"))
 r = redis.Redis(
     host=url.hostname,  # type: ignore
