@@ -12,3 +12,7 @@ r = redis.Redis(
     ssl=True,
     ssl_cert_reqs=None,
 )
+
+print("Setting key=value")
+r.set("key", "value")
+print("Successfull set key=value")
